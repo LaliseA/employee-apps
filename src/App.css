@@ -1,0 +1,68 @@
+.App {
+  background-color: rgb(243, 237, 237);
+  border: 2px solid black;
+  max-width: 1200px;
+  padding: 10px;
+  margin: 50px 180px;
+  display: flex;
+}
+
+.home-page {
+  border: 2px solid blue;
+  width: 50%;
+  padding: 10px
+}
+
+.search-input {
+  width: 98%;
+  height: 30px;
+  border: 2px solid green;
+  margin-top: 2px;
+  margin-bottom: 2px
+}
+
+.employee-page {
+  padding: 10px;
+  width: 50%;
+  border: 2px solid brown;
+  margin-left: 5px
+}
+
+.emp-list {
+  border: 2px solid purple;
+  padding: 2px;
+}
+
+
+
+.Employee_Directory {
+  border: solid rgb(41, 12, 12);
+  background-color: rgb(16, 209, 145);
+  padding: 5px;
+  text-align: center;
+
+
+}
+
+.emp-item {
+  display: flex;
+  border: 2px solid red;
+  margin-top: 2px
+}
+
+.emp-detail{
+  border: 1px solid black;
+   margin: 20px
+}
+.emp-detail-header{
+  display: flex;
+   border: 1px  solid black
+}
+
+.emp-detail-contact{
+ padding: 5px;
+  border: 1px  solid black;
+   display: flex;
+    justify-content: space-between
+
+}
