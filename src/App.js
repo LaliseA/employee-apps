@@ -3,7 +3,11 @@ import './App.css';
 import React from 'react';
 import HomePage from './components/HomePage';
 import EmployeePage from './components/EmployeePage';
+import Navbar from './Navbar';
 import Form from './components/Form';
+import Home from './components/Home';
+import Employees from './Employees';
+
 function App() {
   const Employee = [
     {
@@ -47,7 +51,17 @@ function App() {
   const [EmployeeDetail, setEmployeeDetail] = React.useState(Employee[0])
   return (
 <div>
-    <Form />
+   <Navbar />
+   <Form />
+    <Home/>
+    <Employees 
+     setEmployeeDetail={setEmployeeDetail}
+     EmployeeDetail={EmployeeDetail}
+     Employees={Employee}
+     title='my list'
+
+    />
+   
     <div className="App">
         <HomePage Employee={Employee} setEmployeeDetail={setEmployeeDetail} />
         <EmployeePage EmployeeDetail={EmployeeDetail} />

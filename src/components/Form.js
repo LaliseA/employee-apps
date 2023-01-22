@@ -11,13 +11,13 @@ const Form=()=>{
         image:"",
 
     });
-    // const[name,setName]=useState("");
-    // const[ occupation,setOccupation]=useState("");
-    // const[callOffice,setCallOffice]=useState("");
-    // const[callMobile,setMobile]=useState("");
-    // const[sms,setSms]=useState("");
-    // const[email,setEmail]=useState("");
-    // const[image,setImage]=useState("");
+    const[name,setName]=useState("");
+    const[ occupation,setOccupation]=useState("");
+    const[callOffice,setCallOffice]=useState("");
+    const[callMobile,setMobile]=useState("");
+    const[sms,setSms]=useState("");
+    const[email,setEmail]=useState("");
+    const[image,setImage]=useState("");
     function handleChange(event){
         const updateUserData={
             ...employeesData,
@@ -28,13 +28,13 @@ const Form=()=>{
     }
     function handleSubmit(event){
         event.preventDefault();
-        fetch( "",{
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY` ),{
         method:"POST",
         body: JSON.stringify(employeesData),
         headers: {
             "Content-Type": "application/json",
         },   
-});
+};
 }
 
 return(
@@ -95,7 +95,6 @@ return(
     </div>
 );
 };
-export default Form;
 
 const StyledForm={
     marginLeft: "250px",
@@ -116,3 +115,4 @@ const styledButton={
 
 
 
+export default Form;

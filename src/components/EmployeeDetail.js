@@ -1,15 +1,15 @@
 import React from 'react'
 
-export default function EmployeeDetail2({ EmployeeDetail }) {
+export default function EmployeeDetail({ EmployeeDetail }) {
     return (
         <div className='emp-detail'>
             <div className='emp-detail-header' >
                 <div style={{ paddingLeft: "20px" }}>
-                    <img width={70} height={70} style={{ borderRadius: "50%" }} src={EmployeeDetail.image} />
+                    <img width={70} height={70} style={{ borderRadius: "50%" }} src={EmployeeDetail?.image} />
                 </div>
                 <div style={{ alignSelf: "center" }}>
-                    <div>{EmployeeDetail.name}</div>
-                    <div>{EmployeeDetail.title}</div>
+                    <div>{EmployeeDetail?.name}</div>
+                    <div>{EmployeeDetail?.title}</div>
                 </div>
             </div>
 
