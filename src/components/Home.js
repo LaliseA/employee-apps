@@ -2,7 +2,8 @@ import React from "react";
 
 function Home() {
   return (
-    <div style={{ padding: "50px" }}>
+    <div style={{ padding: "50px", margin: "50px",     background: "#f2f2f2",
+    borderRadius: "5%" }}>
       <h1 style={{ textAlign: "center" }}>Welcome To the Employee page</h1>
       <br />
       <p>
@@ -13,6 +14,7 @@ function Home() {
         social network services.
       </p>
       <div>
+
         <button>Login</button>
         <br />
         <button>Register</button>
