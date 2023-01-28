@@ -40,6 +40,7 @@
   background-color: rgb(16, 209, 145);
   padding: 5px;
   text-align: center;
+  display: flex;
 
 
 }
@@ -64,17 +65,20 @@
   border: 1px  solid black;
    display: flex;
     justify-content: space-between
+  }
+*{margin:0; padding:0}
 
-}
+
 .navbar{
-  dispaly: flex;
+  display: flex;
   justify-content: space-between;
-  background: #4066FA;
+  background: #797fa0;
   padding: 10px 16px;
 }
 .navbar-logo{
   color:white;
   font-size: 20px;
+  
 }
 .navbar-menu{
   display: flex;
