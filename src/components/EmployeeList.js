@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import { EmployeeContext } from "../App";
 import EmployeeListItem from "./EmployeeListItem";
 
 function EmployeeList({ employees }) {
+  const { searchInput, setEmployeeDetail } = useContext(EmployeeContext);
+  const filteredEmployees =
+    searchInput !== ""
+      ? employees?.filter((emp) => emp.name.includes(searchInput))
+      : employees;
   return (
     <div className="EmployList" style={styledEmpList}>
-      {employees?.map((emp) => (
-        <EmployeeListItem
-          name={emp.name}
-          image={emp.image}
-          title={emp.occupation}
-        />
+      {filteredEmployees?.map((emp) => (
+        <div onClick={() => setEmployeeDetail(emp)}>
+          <EmployeeListItem
+            name={emp.name}
+            image={emp.image}
+            title={emp.occupation}
+          />
+        </div>
       ))}
     </div>
   );

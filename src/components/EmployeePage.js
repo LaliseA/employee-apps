@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "./Header";
 import EmployeeDetail from "./EmployeeDetail";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { EmployeeContext } from "../App";
 
-function EmployeePage({ employeeDetail }) {
+function EmployeePage() {
+  const { employeeDetail } = useContext(EmployeeContext);
   return (
     <div className="employee-page">
       <Header title="Employee" icon={faAngleLeft} />
